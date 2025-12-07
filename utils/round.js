@@ -1,5 +1,5 @@
 import { compareCards } from "./round.js";
-import {printPlayersCards, printWonRound} from ".././io.js";
+import { printPlayersCards, printWonRound } from ".././io.js";
 
 //======================================
 //            remove Cards
@@ -9,30 +9,27 @@ function drawCards(player1, player2) {
   const player2Card = player2.hand.shift();
 
   const result = compareCards(player1Card, player2Card);
-   
+
   //this will print the players cards.
   printPlayersCards(player1, player2);
 
-  
-  if(result === "p1"){
+  if (result === "p1") {
     player1.hand.push(player1Card, player2Card);
-    console.log("Player 1 WON THIS ROUND!")
-  }else if(result === "p2"){
+    console.log("Player 1 WON THIS ROUND!");
+  } else if (result === "p2") {
     player2.hand.push(player1Card, player2Card);
-    console.log("Player 2 WON THIS ROUND")
+    console.log("Player 2 WON THIS ROUND");
   }
 
   //here we can add a eles : war
-
 }
 
 //======================================
 //            play Round
 //======================================
 function playRound(player1, player2) {
-
-    console.log("Playing round");
-    drawCards(player1, player2);
+  console.log("Playing round");
+  drawCards(player1, player2);
 }
 
 export default playRound;

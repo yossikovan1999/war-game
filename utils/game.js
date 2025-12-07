@@ -40,7 +40,7 @@ function handleEndOfGame(player1, player2) {
 //======================================
 //             Game Over
 //======================================
-function gameOver() {
+function gameOver(player1, player2) {
   //will return true if one of the players has no cards left.
   return player1.hand.length <= 0 || player2.hand.length <= 0;
 }
@@ -49,7 +49,7 @@ function gameOver() {
 //                game
 //======================================
 function game(player1, player2) {
-  while (!gameOver()) {
+  while (!gameOver(player1, player2)) {
     playRound(player1, player2);
   }
 
