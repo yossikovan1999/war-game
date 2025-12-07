@@ -40,7 +40,7 @@ function createCard(rank, suit) {
 //================================
 //        compare cards
 //================================
-function compareCards(card1, card2){
+export function compareCards(card1, card2){
     
     //check if p1 card is greater then p2
     if(card1.value > card2.value){
