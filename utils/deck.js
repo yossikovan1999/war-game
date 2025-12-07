@@ -36,6 +36,28 @@ function createCard(rank, suit) {
   };
 }
 
+
+//================================
+//        compare cards
+//================================
+function compareCards(card1, card2){
+    
+    //check if p1 card is greater then p2
+    if(card1.value > card2.value){
+        return "p1";
+    }
+    
+    //check if p2 card is greater then p1
+    if(card2.value > card1.value){
+        return "p2";
+    }
+    
+    //return war if equal 
+    return "WAR";
+}
+
+
+
 function create_deck() {
   const ranks = [
     "2",
