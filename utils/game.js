@@ -1,6 +1,6 @@
-import { createCard, compareCards, create_deck, shuffle } from "./deck.js";
+import { create_deck, shuffle } from "./deck.js";
 import playRound from "./round.js";
-import { printWinner, printTie } from ".././io.js";
+import { printWinner } from ".././io.js";
 
 function createPlayer(name) {
   return {
@@ -55,5 +55,9 @@ function game(player1, player2) {
 
   handleEndOfGame(player1, player2);
 }
+
+
+gameData = initGame();
+game()
 
 export default game;
