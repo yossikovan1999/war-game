@@ -5,27 +5,27 @@
 function createCard(rank, suit) {
   let cardValue;
 
-  //make sure the rank is in the correct range.
-  if (rank < 2 || rank > 14) {
-    throw new Error("rank is greater then 14 or smaller then 2");
-  }
-
   //this will check initialize the card value.
-  switch (rank) {
-    case 11:
-      cardValue = "J";
+  switch (rank.toUpperCase()) {
+    case "J":
+      cardValue = 11;
       break;
-    case 12:
-      cardValue = "Q";
+    case "Q":
+      cardValue = 12;
       break;
-    case 13:
-      cardValue = "K";
+    case "K":
+      cardValue = 13;
       break;
-    case 14:
-      cardValue = "A";
+    case "A":
+      cardValue = 14;
       break;
     default:
-      cardValue = rank;
+      cardValue = number(rank);
+  }
+
+  //make sure the rank is in the correct range.
+  if (!cardValue) {
+    throw new Error("must send a value that is in the correct range.");
   }
 
   //this will return the card objcet.
