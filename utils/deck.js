@@ -78,9 +78,25 @@ function create_deck() {
   const list_decks = [];
   for (let r of ranks) {
     for (let s of suits) {
-      let card = create_card(r, s);
+      let card = createCard(r, s);
       list_decks.push(card);
     }
   }
   return list_decks;
 }
+
+
+
+
+function shuffle(array){
+    for (let i = 1;i<=1000;i++){
+        let i = Math.floor(Math.random()*array.length)
+        let j = Math.floor(Math.random()*array.length)
+        let tmp = array[i]
+        array[i] = array[j]
+        array[j] = tmp
+    }
+}
+
+
+
