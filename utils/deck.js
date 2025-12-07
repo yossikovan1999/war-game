@@ -36,27 +36,24 @@ function createCard(rank, suit) {
   };
 }
 
-
 //================================
 //        compare cards
 //================================
-function compareCards(card1, card2){
-    
-    //check if p1 card is greater then p2
-    if(card1.value > card2.value){
-        return "p1";
-    }
-    
-    //check if p2 card is greater then p1
-    if(card2.value > card1.value){
-        return "p2";
-    }
-    
-    //return war if equal 
-    return "WAR";
+
+function compareCards(card1, card2) {
+  //check if p1 card is greater then p2
+  if (card1.value > card2.value) {
+    return "p1";
+  }
+
+  //check if p2 card is greater then p1
+  if (card2.value > card1.value) {
+    return "p2";
+  }
+
+  //return war if equal
+  return "WAR";
 }
-
-
 
 function create_deck() {
   const ranks = [
@@ -85,18 +82,14 @@ function create_deck() {
   return list_decks;
 }
 
-
-
-
-function shuffle(array){
-    for (let i = 1;i<=1000;i++){
-        let i = Math.floor(Math.random()*array.length)
-        let j = Math.floor(Math.random()*array.length)
-        let tmp = array[i]        
-        array[i] = array[j]
-        array[j] = tmp
-    }
+function shuffle(array) {
+  for (let i = 1; i <= 1000; i++) {
+    let i = Math.floor(Math.random() * array.length);
+    let j = Math.floor(Math.random() * array.length);
+    let tmp = array[i];
+    array[i] = array[j];
+    array[j] = tmp;
+  }
 }
 
-export {createCard,compareCards,create_deck,shuffle}
-
+export { createCard, compareCards, create_deck, shuffle };
