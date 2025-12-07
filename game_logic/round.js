@@ -1,5 +1,5 @@
-import { compareCards } from "./round.js";
-import { printPlayersCards, printWonRound } from ".././io.js";
+import { compareCards } from "../utils/deck.js";
+import { printPlayersCards, printWonRound } from "../io.js";
 
 //======================================
 //            remove Cards
@@ -11,13 +11,13 @@ function drawCards(player1, player2) {
   const result = compareCards(player1Card, player2Card);
 
   //this will print the players cards.
-  printPlayersCards(player1, player2);
+  printPlayersCards(player1Card, player2Card);
 
   if (result === "p1") {
-    player1.hand.push(player1Card, player2Card);
+    player1.wonPlay.push(player1Card, player2Card);
     console.log("Player 1 WON THIS ROUND!");
   } else if (result === "p2") {
-    player2.hand.push(player1Card, player2Card);
+    player2.wonPlay.push(player1Card, player2Card);
     console.log("Player 2 WON THIS ROUND");
   }
 
