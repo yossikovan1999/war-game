@@ -31,7 +31,7 @@ function createCard(rank, suit) {
   //this will return the card objcet.
   return {
     rank: rank,
-    suit: suit,
+    suite: suit,
     value: cardValue,
   };
 }
@@ -40,7 +40,7 @@ function createCard(rank, suit) {
 //================================
 //        compare cards
 //================================
-export function compareCards(card1, card2){
+function compareCards(card1, card2){
     
     //check if p1 card is greater then p2
     if(card1.value > card2.value){
