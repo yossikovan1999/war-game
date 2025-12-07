@@ -20,7 +20,7 @@ function createCard(rank, suit) {
       cardValue = 14;
       break;
     default:
-      cardValue = number(rank);
+      cardValue = Number(rank);
   }
 
   //make sure the rank is in the correct range.
