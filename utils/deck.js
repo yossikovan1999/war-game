@@ -92,11 +92,11 @@ function shuffle(array){
     for (let i = 1;i<=1000;i++){
         let i = Math.floor(Math.random()*array.length)
         let j = Math.floor(Math.random()*array.length)
-        let tmp = array[i]
+        let tmp = array[i]        
         array[i] = array[j]
         array[j] = tmp
     }
 }
 
-
+export {createCard,compareCards,create_deck,shuffle}
 
