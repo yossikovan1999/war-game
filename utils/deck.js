@@ -56,9 +56,11 @@ function create_deck() {
   const list_decks = [];
   for (let r of ranks) {
     for (let s of suits) {
-      let card = create_card(r, s);
+      let card = createCard(r, s);
       list_decks.push(card);
     }
   }
   return list_decks;
 }
+
+console.log(create_deck());
